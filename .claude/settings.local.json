@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Skill(ralph-wiggum:ralph-loop)",
+      "Bash(\"/home/xerox/.claude/plugins/cache/claude-code-plugins/ralph-wiggum/1.0.0/scripts/setup-ralph-loop.sh\" \"Passe en revue tous les fichiers HTML \\(v1 a v9 + index.html\\) du projet Rire. Pour chaque fichier : 1\\) Verifie quaucun element ne se superpose \\(texte sur texte, boutons caches, etc.\\) 2\\) Rends le design plus propre, moins generique et plus artistique 3\\) Assure-toi que chaque version a une identite visuelle forte et distincte 4\\) Corrige toute imperfection CSS/HTML. Cest pour presenter 10 versions a un client demain, tout doit etre impeccable et professionnel. Tu es un dev full-stack avec un oeil de designer.\")"
+    ]
+  }
+}

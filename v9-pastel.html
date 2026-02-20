@@ -1,0 +1,2606 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folle de Rire – Yoga du Rire</title>
+  <meta name="description" content="Folle de Rire – Yoga du Rire en région stéphanoise. Séances accessibles à tous, de 8 à 99 ans. Réduisez le stress, renforcez vos liens sociaux et retrouvez votre énergie vitale." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <style>
+    /* ===========================
+       RESET & BASE
+    =========================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --rose:    #FFE4E8;
+      --bleu:    #D4E9F7;
+      --menthe:  #D1F2EB;
+      --lilas:   #E8D5F5;
+      --peche:   #FFE5D4;
+      --beurre:  #FFF9C4;
+      --brun:    #6B5B4F;
+      --brun-light: #9B8B7F;
+      --white:   #FFFFFF;
+
+      --rose-border:   #F4A7B9;
+      --bleu-border:   #90CAE8;
+      --menthe-border: #7DD9C8;
+      --lilas-border:  #C39BD3;
+      --peche-border:  #F4B394;
+      --beurre-border: #F7E04A;
+
+      --shadow-rose:   0 8px 32px rgba(244, 167, 185, 0.35);
+      --shadow-bleu:   0 8px 32px rgba(144, 202, 232, 0.35);
+      --shadow-menthe: 0 8px 32px rgba(125, 217, 200, 0.35);
+      --shadow-lilas:  0 8px 32px rgba(195, 155, 211, 0.35);
+      --shadow-peche:  0 8px 32px rgba(244, 179, 148, 0.35);
+
+      --radius-xl: 40px;
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 10px;
+
+      --transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --transition-med:  0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --transition-fast: 0.25s ease;
+
+      --header-h: 72px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 400;
+      color: var(--brun);
+      background: linear-gradient(135deg,
+        #FFE4E8 0%,
+        #FFE5D4 15%,
+        #FFF9C4 30%,
+        #D4E9F7 50%,
+        #D1F2EB 68%,
+        #E8D5F5 85%,
+        #FFE4E8 100%
+      );
+      background-attachment: fixed;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ===========================
+       SCROLL BAR
+    =========================== */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--rose); }
+    ::-webkit-scrollbar-thumb {
+      background: var(--lilas-border);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover { background: var(--menthe-border); }
+
+    /* ===========================
+       TYPOGRAPHY
+    =========================== */
+    h1, h2, h3 { font-family: 'Caveat', cursive; font-weight: 700; }
+    .logo-text  { font-family: 'Pacifico', cursive; }
+
+    h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.1; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 0.5em; }
+    h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); margin-bottom: 0.4em; }
+
+    p  { line-height: 1.75; font-size: clamp(0.9rem, 1.5vw, 1.05rem); }
+
+    a  { color: inherit; text-decoration: none; }
+
+    /* ===========================
+       UTILITY
+    =========================== */
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 18px;
+      color: var(--brun);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--brun-light);
+      max-width: 680px;
+      margin: 0 auto 60px;
+      font-size: 1.05rem;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .tag-rose   { background: var(--rose);   color: var(--rose-border);   border: 1.5px solid var(--rose-border); }
+    .tag-bleu   { background: var(--bleu);   color: #5599BB;              border: 1.5px solid var(--bleu-border); }
+    .tag-menthe { background: var(--menthe); color: #3AADA0;              border: 1.5px solid var(--menthe-border); }
+    .tag-lilas  { background: var(--lilas);  color: #9B59B6;              border: 1.5px solid var(--lilas-border); }
+
+    /* CARDS */
+    .card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 36px 32px;
+      transition: transform var(--transition-med), box-shadow var(--transition-med);
+      border: 2.5px solid transparent;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.015);
+    }
+
+    .card-rose   { border-color: var(--rose-border);   box-shadow: var(--shadow-rose); }
+    .card-bleu   { border-color: var(--bleu-border);   box-shadow: var(--shadow-bleu); }
+    .card-menthe { border-color: var(--menthe-border); box-shadow: var(--shadow-menthe); }
+    .card-lilas  { border-color: var(--lilas-border);  box-shadow: var(--shadow-lilas); }
+    .card-peche  { border-color: var(--peche-border);  box-shadow: var(--shadow-peche); }
+
+    .card-rose:hover   { box-shadow: 0 16px 48px rgba(244, 167, 185, 0.55); }
+    .card-bleu:hover   { box-shadow: 0 16px 48px rgba(144, 202, 232, 0.55); }
+    .card-menthe:hover { box-shadow: 0 16px 48px rgba(125, 217, 200, 0.55); }
+    .card-lilas:hover  { box-shadow: 0 16px 48px rgba(195, 155, 211, 0.55); }
+    .card-peche:hover  { box-shadow: 0 16px 48px rgba(244, 179, 148, 0.55); }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 34px;
+      border-radius: 50px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+      text-decoration: none;
+    }
+
+    .btn:hover { transform: translateY(-3px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--rose-border) 0%, var(--lilas-border) 100%);
+      color: white;
+      box-shadow: 0 6px 24px rgba(195, 155, 211, 0.45);
+    }
+    .btn-primary:hover { box-shadow: 0 12px 36px rgba(195, 155, 211, 0.65); }
+
+    .btn-secondary {
+      background: white;
+      color: var(--brun);
+      border: 2.5px solid var(--rose-border);
+      box-shadow: var(--shadow-rose);
+    }
+    .btn-secondary:hover { background: var(--rose); }
+
+    .btn-menthe {
+      background: linear-gradient(135deg, var(--menthe-border) 0%, var(--bleu-border) 100%);
+      color: white;
+      box-shadow: 0 6px 24px rgba(125, 217, 200, 0.45);
+    }
+    .btn-menthe:hover { box-shadow: 0 12px 36px rgba(125, 217, 200, 0.65); }
+
+    /* PLACEHOLDER IMAGES */
+    .placeholder-img {
+      width: 100%;
+      border-radius: var(--radius-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Caveat', cursive;
+      font-size: 1.3rem;
+      color: var(--brun-light);
+      text-align: center;
+      padding: 24px;
+      font-weight: 600;
+    }
+
+    /* EMOJI */
+    .emoji { font-style: normal; }
+
+    /* GRID */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+    @media (max-width: 1024px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .section { padding: 60px 0; }
+    }
+
+    /* ===========================
+       HEADER
+    =========================== */
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--header-h);
+      background: rgba(232, 213, 245, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 2px solid rgba(195, 155, 211, 0.30);
+      transition: background var(--transition-med), box-shadow var(--transition-med);
+    }
+
+    #header.scrolled {
+      background: rgba(232, 213, 245, 0.97);
+      box-shadow: 0 4px 24px rgba(195, 155, 211, 0.25);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .logo-box {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, var(--rose-border), var(--lilas-border));
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 16px rgba(195, 155, 211, 0.4);
+      flex-shrink: 0;
+    }
+
+    .logo-labels { display: flex; flex-direction: column; line-height: 1.1; }
+
+    .logo-main {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.15rem;
+      color: #9B59B6;
+    }
+
+    .logo-sub {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      color: var(--brun-light);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* NAV */
+    nav { display: flex; align-items: center; gap: 8px; }
+
+    .nav-link {
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--brun);
+      letter-spacing: 0.03em;
+      transition: background var(--transition-fast), color var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      background: var(--rose);
+      color: #c0435f;
+    }
+
+    /* HAMBURGER */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: var(--radius-sm);
+      background: transparent;
+      border: none;
+      transition: background var(--transition-fast);
+    }
+
+    .hamburger:hover { background: var(--rose); }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: var(--brun);
+      border-radius: 4px;
+      transition: all var(--transition-med);
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+    /* MOBILE NAV */
+    .mobile-nav {
+      display: flex;
+      position: fixed;
+      top: var(--header-h);
+      left: 0;
+      right: 0;
+      background: rgba(232, 213, 245, 0.98);
+      backdrop-filter: blur(16px);
+      padding: 24px 20px;
+      flex-direction: column;
+      gap: 8px;
+      border-bottom: 2px solid rgba(195, 155, 211, 0.3);
+      z-index: 999;
+      transform: translateY(-20px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: transform var(--transition-med), opacity var(--transition-med), visibility var(--transition-med);
+    }
+
+    .mobile-nav.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .mobile-nav .nav-link {
+      padding: 12px 20px;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ===========================
+       HERO
+    =========================== */
+    #hero {
+      padding-top: calc(var(--header-h) + 60px);
+      padding-bottom: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(232, 213, 245, 0.6) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(209, 242, 235, 0.5) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-content { position: relative; z-index: 1; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      border: 2px solid var(--rose-border);
+      border-radius: 50px;
+      padding: 10px 22px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #c0435f;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-rose);
+      animation: floatBadge 4s ease-in-out infinite;
+    }
+
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-6px); }
+    }
+
+    .hero-title {
+      margin-bottom: 24px;
+      color: var(--brun);
+    }
+
+    .hero-title .accent {
+      color: #9B59B6;
+      font-family: 'Pacifico', cursive;
+      font-size: 0.85em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: var(--brun-light);
+      margin-bottom: 16px;
+    }
+
+    .hero-desc {
+      color: var(--brun-light);
+      margin-bottom: 36px;
+      font-size: 0.98rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-img {
+      height: 440px;
+      background: linear-gradient(145deg, var(--rose) 0%, var(--bleu) 50%, var(--menthe) 100%);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-img-blob {
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      top: -10%;
+      left: -10%;
+      background: linear-gradient(135deg, rgba(232, 213, 245, 0.4) 0%, rgba(209, 242, 235, 0.3) 100%);
+      border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+      z-index: 0;
+      animation: blobMorph 8s ease-in-out infinite;
+    }
+
+    @keyframes blobMorph {
+      0%, 100% { border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%; }
+      33%       { border-radius: 45% 55% 40% 60% / 60% 40% 55% 45%; }
+      66%       { border-radius: 55% 45% 65% 35% / 35% 65% 45% 55%; }
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-image-wrap { order: -1; }
+      .hero-img { height: 300px; }
+    }
+
+    /* ===========================
+       STATS
+    =========================== */
+    #stats {
+      padding: 40px 0;
+    }
+
+    .stats-inner {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 48px 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      box-shadow: 0 8px 40px rgba(195, 155, 211, 0.2);
+      border: 2px solid rgba(195, 155, 211, 0.3);
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      transition: background var(--transition-fast), transform var(--transition-med);
+    }
+
+    .stat-item:hover { transform: scale(1.04); }
+    .stat-item:nth-child(1) { background: var(--rose); }
+    .stat-item:nth-child(2) { background: var(--beurre); }
+    .stat-item:nth-child(3) { background: var(--menthe); }
+
+    .stat-emoji { font-size: 2.2rem; display: block; margin-bottom: 10px; }
+
+    .stat-number {
+      font-family: 'Caveat', cursive;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--brun);
+      display: block;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--brun-light);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 600px) {
+      .stats-inner { grid-template-columns: 1fr; padding: 32px 24px; }
+    }
+
+    /* ===========================
+       LE RIRE
+    =========================== */
+    #le-rire { background: transparent; }
+
+    .rire-images {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 60px;
+      height: 280px;
+    }
+
+    .rire-img-main { height: 100%; background: linear-gradient(135deg, var(--rose) 0%, var(--peche) 100%); }
+    .rire-img-2    { height: 100%; background: linear-gradient(135deg, var(--bleu) 0%, var(--menthe) 100%); }
+    .rire-img-3    { height: 100%; background: linear-gradient(135deg, var(--beurre) 0%, var(--menthe) 100%); }
+
+    .rire-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+
+    .rire-card-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .icon-bg-rose   { background: var(--rose); }
+    .icon-bg-bleu   { background: var(--bleu); }
+    .icon-bg-menthe { background: var(--menthe); }
+    .icon-bg-lilas  { background: var(--lilas); }
+    .icon-bg-beurre { background: var(--beurre); }
+
+    .rire-card p { color: var(--brun-light); }
+
+    @media (max-width: 768px) {
+      .rire-images { grid-template-columns: 1fr; height: auto; }
+      .rire-img-main, .rire-img-2, .rire-img-3 { height: 180px; }
+      .rire-cards { grid-template-columns: 1fr; }
+    }
+
+    /* ===========================
+       YOGA DU RIRE
+    =========================== */
+    #yoga-du-rire {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #yoga-du-rire::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(180deg,
+        rgba(255,255,255,0.35) 0%,
+        rgba(209, 242, 235, 0.25) 50%,
+        rgba(255,255,255,0.35) 100%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .yoga-content { position: relative; z-index: 1; }
+
+    .yoga-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .yoga-card { text-align: center; }
+    .yoga-card p { color: var(--brun-light); margin-top: 12px; font-size: 0.95rem; }
+
+    .yoga-icon-wrap {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      margin: 0 auto 16px;
+      transition: transform var(--transition-med);
+    }
+
+    .yoga-card:hover .yoga-icon-wrap { transform: rotate(10deg) scale(1.1); }
+
+    .yoga-interventions {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      border: 2.5px solid var(--menthe-border);
+      box-shadow: var(--shadow-menthe);
+      margin-top: 40px;
+    }
+
+    .yoga-interventions h3 {
+      color: var(--brun);
+      margin-bottom: 24px;
+      font-size: 1.5rem;
+    }
+
+    .interv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .interv-group h4 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      color: #3AADA0;
+      margin-bottom: 12px;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .interv-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .interv-list li {
+      background: var(--menthe);
+      border: 1.5px solid var(--menthe-border);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #3AADA0;
+      transition: background var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .interv-list li:hover { background: var(--menthe-border); color: white; transform: scale(1.05); }
+
+    .interv-list.enfants li {
+      background: var(--beurre);
+      border-color: var(--beurre-border);
+      color: #8B7A00;
+    }
+
+    .interv-list.enfants li:hover { background: var(--beurre-border); color: white; }
+
+    .yoga-stat-banner {
+      background: linear-gradient(135deg, var(--menthe) 0%, var(--bleu) 100%);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      text-align: center;
+      margin-top: 36px;
+      border: 2.5px solid var(--menthe-border);
+    }
+
+    .yoga-stat-banner .big-number {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(3rem, 8vw, 5rem);
+      color: white;
+      display: block;
+      text-shadow: 0 4px 16px rgba(58, 173, 160, 0.4);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .yoga-stat-banner p {
+      color: rgba(255,255,255,0.85);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .yoga-grid { grid-template-columns: 1fr; }
+      .interv-grid { grid-template-columns: 1fr; }
+      .yoga-interventions { padding: 28px 20px; }
+    }
+
+    /* ===========================
+       ANIMATRICE
+    =========================== */
+    #animatrice {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .animatrice-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .animatrice-photo {
+      position: relative;
+    }
+
+    .anim-photo-box {
+      height: 480px;
+      background: linear-gradient(145deg, var(--lilas) 0%, var(--rose) 50%, var(--peche) 100%);
+      position: relative;
+      z-index: 1;
+    }
+
+    .anim-photo-deco {
+      position: absolute;
+      width: 110%;
+      height: 110%;
+      top: -5%;
+      left: -5%;
+      border-radius: 65% 35% 50% 50% / 40% 60% 40% 60%;
+      background: rgba(232, 213, 245, 0.35);
+      z-index: 0;
+      animation: blobMorph 10s ease-in-out infinite reverse;
+    }
+
+    .animatrice-content {}
+
+    .animatrice-content h2 { color: var(--brun); margin-bottom: 8px; }
+
+    .anim-subtitle {
+      font-family: 'Caveat', cursive;
+      font-size: 1.3rem;
+      color: var(--lilas-border);
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+
+    .anim-story {
+      color: var(--brun-light);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .anim-highlight {
+      background: var(--lilas);
+      border: 1.5px solid var(--lilas-border);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .anim-highlight .emoji { font-size: 1.8rem; flex-shrink: 0; margin-top: 2px; }
+    .anim-highlight p { color: var(--brun); font-weight: 600; font-size: 0.95rem; margin: 0; }
+
+    .certif-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .certif-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      color: var(--brun);
+      font-size: 0.95rem;
+    }
+
+    .certif-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .certif-dot-lilas  { background: var(--lilas-border); }
+    .certif-dot-menthe { background: var(--menthe-border); }
+    .certif-dot-rose   { background: var(--rose-border); }
+
+    .banana-quote {
+      background: var(--beurre);
+      border: 2px solid var(--beurre-border);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      font-family: 'Caveat', cursive;
+      font-size: 1.2rem;
+      color: #8B7A00;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .animatrice-inner { grid-template-columns: 1fr; gap: 40px; }
+      .anim-photo-box { height: 300px; }
+    }
+
+    /* ===========================
+       FAQ
+    =========================== */
+    #faq {}
+
+    .faq-list {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: var(--radius-lg);
+      border: 2px solid transparent;
+      overflow: hidden;
+      transition: border-color var(--transition-med), box-shadow var(--transition-med);
+    }
+
+    .faq-item:nth-child(1) { border-color: var(--rose-border); }
+    .faq-item:nth-child(2) { border-color: var(--bleu-border); }
+    .faq-item:nth-child(3) { border-color: var(--menthe-border); }
+    .faq-item:nth-child(4) { border-color: var(--lilas-border); }
+    .faq-item:nth-child(5) { border-color: var(--peche-border); }
+    .faq-item:nth-child(6) { border-color: var(--beurre-border); }
+    .faq-item:nth-child(7) { border-color: var(--rose-border); }
+
+    .faq-item:nth-child(1):hover { box-shadow: var(--shadow-rose); }
+    .faq-item:nth-child(2):hover { box-shadow: var(--shadow-bleu); }
+    .faq-item:nth-child(3):hover { box-shadow: var(--shadow-menthe); }
+    .faq-item:nth-child(4):hover { box-shadow: var(--shadow-lilas); }
+    .faq-item:nth-child(5):hover { box-shadow: var(--shadow-peche); }
+    .faq-item:nth-child(6):hover { box-shadow: 0 8px 32px rgba(247, 224, 74, 0.35); }
+    .faq-item:nth-child(7):hover { box-shadow: var(--shadow-rose); }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--brun);
+      transition: background var(--transition-fast);
+    }
+
+    .faq-q:hover { background: rgba(232, 213, 245, 0.15); }
+
+    .faq-q-text { display: flex; align-items: center; gap: 14px; }
+
+    .faq-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .faq-item:nth-child(1) .faq-num { background: var(--rose); color: var(--rose-border); }
+    .faq-item:nth-child(2) .faq-num { background: var(--bleu); color: #5599BB; }
+    .faq-item:nth-child(3) .faq-num { background: var(--menthe); color: #3AADA0; }
+    .faq-item:nth-child(4) .faq-num { background: var(--lilas); color: #9B59B6; }
+    .faq-item:nth-child(5) .faq-num { background: var(--peche); color: #CC7A50; }
+    .faq-item:nth-child(6) .faq-num { background: var(--beurre); color: #8B7A00; }
+    .faq-item:nth-child(7) .faq-num { background: var(--rose); color: var(--rose-border); }
+
+    .faq-chevron {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--lilas);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform var(--transition-med), background var(--transition-fast);
+      font-size: 0.75rem;
+      color: #9B59B6;
+    }
+
+    .faq-item.open .faq-chevron { transform: rotate(180deg); background: var(--lilas-border); color: white; }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-slow), padding var(--transition-slow);
+    }
+
+    .faq-a-inner {
+      padding: 0 28px 24px;
+      color: var(--brun-light);
+      line-height: 1.75;
+      font-size: 0.97rem;
+    }
+
+    .faq-item.open .faq-a { max-height: 400px; }
+
+    /* ===========================
+       CONTACT
+    =========================== */
+    #contact {}
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-form-wrap {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 48px 40px;
+      border: 2.5px solid var(--rose-border);
+      box-shadow: var(--shadow-rose);
+    }
+
+    .contact-form-wrap h2 { color: var(--brun); margin-bottom: 8px; }
+    .contact-form-wrap .form-subtitle { color: var(--brun-light); margin-bottom: 32px; font-size: 0.95rem; }
+
+    .form-group { margin-bottom: 20px; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--brun);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    label .req { color: var(--rose-border); margin-left: 3px; }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid rgba(195, 155, 211, 0.3);
+      border-radius: var(--radius-md);
+      font-family: 'Quicksand', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--brun);
+      background: white;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+      outline: none;
+      appearance: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--lilas-border);
+      box-shadow: 0 0 0 4px rgba(195, 155, 211, 0.15);
+    }
+
+    input::placeholder, textarea::placeholder { color: rgba(107, 91, 79, 0.4); }
+
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239B8B7F' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 42px;
+    }
+
+    textarea { resize: vertical; min-height: 120px; }
+
+    .form-submit-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--brun-light);
+    }
+
+    #form-success {
+      display: none;
+      background: var(--menthe);
+      border: 1.5px solid var(--menthe-border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      color: #3AADA0;
+      font-weight: 600;
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .contact-aside {}
+
+    .contact-image {
+      height: 300px;
+      background: linear-gradient(145deg, var(--bleu) 0%, var(--menthe) 50%, var(--lilas) 100%);
+      margin-bottom: 28px;
+    }
+
+    .contact-info-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      border: 2.5px solid var(--bleu-border);
+      box-shadow: var(--shadow-bleu);
+      margin-bottom: 20px;
+    }
+
+    .contact-info-card h3 { color: var(--brun); margin-bottom: 20px; font-size: 1.3rem; }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .contact-info-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-info-item p {
+      font-size: 0.92rem;
+      color: var(--brun-light);
+      line-height: 1.5;
+    }
+
+    .contact-info-item a {
+      color: #9B59B6;
+      font-weight: 600;
+      transition: color var(--transition-fast);
+    }
+
+    .contact-info-item a:hover { color: var(--lilas-border); }
+
+    .share-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--lilas) 0%, var(--bleu) 100%);
+      border: 2px solid var(--lilas-border);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #9B59B6;
+      cursor: pointer;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .share-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lilas);
+      background: linear-gradient(135deg, var(--lilas-border) 0%, var(--bleu-border) 100%);
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+      .contact-inner { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 32px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    /* ===========================
+       SHARE MODAL
+    =========================== */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(107, 91, 79, 0.4);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 44px;
+      max-width: 460px;
+      width: 90%;
+      border: 2.5px solid var(--lilas-border);
+      box-shadow: 0 20px 60px rgba(195, 155, 211, 0.4);
+      position: relative;
+      animation: modalIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.8) translateY(20px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--rose);
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1rem;
+      cursor: pointer;
+      color: var(--brun);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--transition-fast);
+    }
+
+    .modal-close:hover { background: var(--rose-border); color: white; }
+
+    .modal h3 { color: var(--brun); margin-bottom: 8px; font-size: 1.5rem; }
+    .modal p { color: var(--brun-light); margin-bottom: 24px; font-size: 0.9rem; }
+
+    .modal-url-copy {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .modal-url-copy input {
+      flex: 1;
+      padding: 12px 16px;
+      border: 2px solid var(--lilas-border);
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      color: var(--brun-light);
+      background: var(--lilas);
+    }
+
+    .modal-url-copy button {
+      background: var(--lilas-border);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .modal-url-copy button:hover { background: #9B59B6; }
+
+    .share-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .share-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 10px;
+      border-radius: var(--radius-md);
+      border: 2px solid transparent;
+      cursor: pointer;
+      background: none;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: var(--brun);
+      transition: all var(--transition-fast);
+    }
+
+    .share-option:hover { transform: translateY(-3px); }
+    .share-option:nth-child(1) { background: var(--rose);   border-color: var(--rose-border); }
+    .share-option:nth-child(2) { background: var(--bleu);   border-color: var(--bleu-border); }
+    .share-option:nth-child(3) { background: var(--menthe); border-color: var(--menthe-border); }
+
+    .share-option .share-icon { font-size: 1.6rem; }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    footer {
+      background: linear-gradient(135deg, var(--lilas) 0%, var(--rose) 50%, var(--peche) 100%);
+      border-top: 2px solid rgba(195, 155, 211, 0.35);
+      padding: 60px 0 30px;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand .logo { margin-bottom: 16px; display: inline-flex; }
+    .footer-brand p { color: var(--brun-light); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; }
+
+    .footer-nav h4, .footer-contact-col h4 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      color: var(--brun-light);
+      margin-bottom: 16px;
+    }
+
+    .footer-nav ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-nav ul li a {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--brun);
+      transition: color var(--transition-fast), padding-left var(--transition-fast);
+    }
+    .footer-nav ul li a:hover { color: #9B59B6; padding-left: 4px; }
+
+    .footer-contact-col p {
+      font-size: 0.88rem;
+      color: var(--brun-light);
+      line-height: 1.7;
+    }
+
+    .footer-contact-col a {
+      color: #9B59B6;
+      font-weight: 600;
+      transition: color var(--transition-fast);
+    }
+    .footer-contact-col a:hover { color: var(--lilas-border); }
+
+    .footer-divider {
+      border: none;
+      border-top: 1.5px solid rgba(195, 155, 211, 0.35);
+      margin-bottom: 24px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom p {
+      font-size: 0.82rem;
+      color: var(--brun-light);
+    }
+
+    .footer-bottom a {
+      color: #9B59B6;
+      font-weight: 600;
+    }
+
+    .footer-heart {
+      font-family: 'Caveat', cursive;
+      font-size: 0.95rem;
+      color: var(--rose-border);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    /* ===========================
+       FLOATING BUTTONS
+    =========================== */
+    .float-group {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-end;
+    }
+
+    .float-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-med);
+      text-decoration: none;
+    }
+
+    .float-btn:hover { transform: scale(1.12) translateY(-2px); }
+
+    .float-back-top {
+      background: linear-gradient(135deg, var(--lilas-border), var(--rose-border));
+      color: white;
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.8);
+      transition: opacity var(--transition-med), transform var(--transition-med);
+    }
+
+    .float-back-top.visible {
+      opacity: 1;
+      pointer-events: all;
+      transform: scale(1);
+    }
+
+    .float-back-top.visible:hover { transform: scale(1.12) translateY(-2px); }
+
+    .float-contact {
+      background: linear-gradient(135deg, var(--menthe-border), var(--bleu-border));
+      color: white;
+    }
+
+    /* ===========================
+       DECORATIVE ELEMENTS
+    =========================== */
+    .deco-dots {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .deco-dots-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .deco-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--lilas-border);
+    }
+
+    /* FLOATING ORBS */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: floatOrb 6s ease-in-out infinite;
+    }
+
+    @keyframes floatOrb {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50%       { transform: translateY(-20px) scale(1.05); }
+    }
+
+    /* SECTION DIVIDERS */
+    .wave-divider {
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .wave-divider svg {
+      display: block;
+      width: 100%;
+    }
+
+    /* ===========================
+       ACCESSIBILITY
+    =========================== */
+    :focus-visible {
+      outline: 3px solid var(--lilas-border);
+      outline-offset: 3px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    /* ===========================
+       ANIMATIONS
+    =========================== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .anim-fade-up {
+      opacity: 0;
+      animation: fadeInUp 0.7s var(--transition-slow) forwards;
+    }
+
+    .anim-delay-1 { animation-delay: 0.1s; }
+    .anim-delay-2 { animation-delay: 0.2s; }
+    .anim-delay-3 { animation-delay: 0.3s; }
+    .anim-delay-4 { animation-delay: 0.4s; }
+
+    /* Intersection observer classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal-scale.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===========================
+       HEADER
+  =========================== -->
+  <header id="header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+
+        <a href="#hero" class="logo" aria-label="Folle de Rire – Accueil">
+          <div class="logo-box" aria-hidden="true">😄</div>
+          <div class="logo-labels">
+            <span class="logo-main">Folle de Rire</span>
+            <span class="logo-sub">Yoga du Rire</span>
+          </div>
+        </a>
+
+        <nav role="navigation" aria-label="Navigation principale">
+          <a href="#le-rire"    class="nav-link">Le Rire</a>
+          <a href="#yoga-du-rire" class="nav-link">Le Yoga du Rire</a>
+          <a href="#animatrice" class="nav-link">Votre Animatrice</a>
+          <a href="#contact"    class="nav-link">Contact</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Navigation mobile">
+    <a href="#le-rire"      class="nav-link">Le Rire</a>
+    <a href="#yoga-du-rire" class="nav-link">Le Yoga du Rire</a>
+    <a href="#animatrice"   class="nav-link">Votre Animatrice</a>
+    <a href="#contact"      class="nav-link">Contact</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- ===========================
+         HERO
+    =========================== -->
+    <section id="hero" aria-labelledby="hero-title">
+
+      <div class="container">
+        <div class="hero-inner">
+
+          <div class="hero-content">
+
+            <div class="hero-badge" aria-label="Retrouvez votre âme d'enfant">
+              😄 Retrouvez votre âme d'enfant 🎈
+            </div>
+
+            <h1 id="hero-title" class="hero-title">
+              Redécouvrez<br>
+              la joie de <span class="accent">rire</span><br>
+              ensemble
+            </h1>
+
+            <p class="hero-subtitle">
+              Créez du lien social et renforcez la cohésion de groupe grâce au yoga du rire.
+            </p>
+
+            <p class="hero-desc">
+              Une méthode douce et joyeuse accessible à tous, de 8 à 99 ans, pour libérer le stress et retrouver votre énergie vitale. Debout ou assis, valides ou en situation de handicap — tout le monde est bienvenu.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#le-rire" class="btn btn-primary">
+                Découvrir les bienfaits ✨
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                Nous contacter 💌
+              </a>
+            </div>
+
+          </div>
+
+          <div class="hero-image-wrap">
+            <div class="hero-img-blob" aria-hidden="true"></div>
+            <div class="placeholder-img hero-img" role="img" aria-label="Groupe diversifié participant à une séance de yoga du rire">
+              [IMAGE 1]
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===========================
+         STATS
+    =========================== -->
+    <section id="stats" aria-label="Chiffres clés">
+      <div class="container">
+        <div class="stats-inner reveal">
+
+          <div class="stat-item">
+            <span class="stat-emoji" aria-hidden="true">😊</span>
+            <span class="stat-number" data-target="1500" id="stat-participants">0</span>
+            <span class="stat-label">Participants</span>
+          </div>
+
+          <div class="stat-item">
+            <span class="stat-emoji" aria-hidden="true">⭐</span>
+            <span class="stat-number" data-target="5" id="stat-annees">0</span>
+            <span class="stat-label">Années d'expérience</span>
+          </div>
+
+          <div class="stat-item">
+            <span class="stat-emoji" aria-hidden="true">❤️</span>
+            <span class="stat-number" id="stat-satisfaction">0</span>
+            <span class="stat-label">Satisfaction</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         LE RIRE
+    =========================== -->
+    <section id="le-rire" class="section" aria-labelledby="rire-title">
+      <div class="container">
+
+        <div class="tag tag-rose reveal">Pourquoi rire ?</div>
+        <h2 id="rire-title" class="section-title reveal">Le Rire, votre meilleur allié santé</h2>
+        <p class="section-subtitle reveal">Le rire n'est pas seulement agréable, c'est un vrai médicament naturel. Voici ce que la science nous dit.</p>
+
+        <!-- Images trio -->
+        <div class="rire-images reveal">
+          <div class="placeholder-img rire-img-main" role="img" aria-label="Séance de yoga du rire en groupe">
+            [IMAGE 2]
+          </div>
+          <div class="placeholder-img rire-img-2" role="img" aria-label="Exercices de respiration joyeuse">
+            [IMAGE 3]
+          </div>
+          <div class="placeholder-img rire-img-3" role="img" aria-label="Groupe de participants applaudissant ensemble">
+            [IMAGE 4]
+          </div>
+        </div>
+
+        <!-- 4 cards bienfaits -->
+        <div class="rire-cards">
+
+          <div class="card card-rose reveal">
+            <div class="rire-card-icon icon-bg-rose" aria-hidden="true">😌</div>
+            <h3>L'antidote au stress</h3>
+            <p>Le rire déclenche une cascade d'endorphines, nos hormones du bonheur naturelles. En même temps, il réduit significativement le cortisol, l'hormone du stress. Résultat&nbsp;: un sentiment durable de bien-être et de légèreté, même dans les moments difficiles.</p>
+          </div>
+
+          <div class="card card-bleu reveal">
+            <div class="rire-card-icon icon-bg-bleu" aria-hidden="true">❤️</div>
+            <h3>Un coeur plus joyeux</h3>
+            <p>10 à 15 minutes de rire sincère équivalent à 30 minutes de vélo pour votre cœur&nbsp;! Cette activité physique douce améliore la circulation sanguine, dilate les vaisseaux et renforce le muscle cardiaque sans aucun effort sportif.</p>
+          </div>
+
+          <div class="card card-menthe reveal">
+            <div class="rire-card-icon icon-bg-menthe" aria-hidden="true">🛡️</div>
+            <h3>Votre bouclier immunitaire</h3>
+            <p>Les études montrent que rire régulièrement augmente la production d'anticorps et stimule les cellules immunitaires de l'organisme. Votre corps devient plus résistant aux infections et aux maladies. Un remède naturel et délicieux&nbsp;!</p>
+          </div>
+
+          <div class="card card-lilas reveal">
+            <div class="rire-card-icon icon-bg-lilas" aria-hidden="true">♿</div>
+            <h3>Accessible à tous, sans exception</h3>
+            <p>Pas besoin de souplesse ni de postures difficiles. Les séances se pratiquent debout <em>ou assis</em>. L'animatrice se déplace vers vous si nécessaire — mobilité réduite ou situation de handicap bienvenues. Le yoga du rire, c'est la joie partagée pour tous, le lien social renforcé et la bienveillance au cœur de chaque séance.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===========================
+         YOGA DU RIRE
+    =========================== -->
+    <section id="yoga-du-rire" class="section" aria-labelledby="yoga-title">
+      <div class="container yoga-content">
+
+        <div class="tag tag-menthe reveal">La méthode</div>
+        <h2 id="yoga-title" class="section-title reveal">Le Yoga du Rire</h2>
+        <p class="section-subtitle reveal">
+          Des échauffements ludiques, des exercices de rires, des respirations et des étirements doux. Une pratique accessible à tous, de 8 à 99 ans, sans prérequis physique ni humour obligatoire&nbsp;!
+        </p>
+
+        <!-- 3 piliers -->
+        <div class="yoga-grid">
+
+          <div class="card card-menthe yoga-card reveal">
+            <div class="yoga-icon-wrap icon-bg-menthe" aria-hidden="true">🌿</div>
+            <h3>Accessible à tous</h3>
+            <p>Aucune posture particulière. Debout ou assis. Les personnes en situation de mobilité réduite ou de handicap sont pleinement intégrées. L'animatrice vient à vous si besoin.</p>
+          </div>
+
+          <div class="card card-bleu yoga-card reveal">
+            <div class="yoga-icon-wrap icon-bg-bleu" aria-hidden="true">🤝</div>
+            <h3>Lien social renforcé</h3>
+            <p>Pas de blagues, pas de performance. Une atmosphère profondément bienveillante où chacun rit avec l'autre, jamais de l'autre. La bonne entente s'installe naturellement entre les participants.</p>
+          </div>
+
+          <div class="card card-peche yoga-card reveal">
+            <div class="yoga-icon-wrap icon-bg-beurre" aria-hidden="true">🎯</div>
+            <h3>Séance sur mesure</h3>
+            <p>Chaque séance dure entre 45 minutes et 1 heure. L'animatrice adapte le rythme, les exercices et l'intensité au groupe présent, qu'il soit senior, professionnel ou enfant.</p>
+          </div>
+
+        </div>
+
+        <!-- Interventions -->
+        <div class="yoga-interventions reveal">
+          <h3>🎪 Nos interventions</h3>
+          <div class="interv-grid">
+
+            <div class="interv-group">
+              <h4>Adultes &amp; Professionnels</h4>
+              <ul class="interv-list">
+                <li>Associations</li>
+                <li>Entreprises</li>
+                <li>Hôpitaux</li>
+                <li>EHPAD</li>
+                <li>EVJF / EVG</li>
+                <li>Événements</li>
+              </ul>
+            </div>
+
+            <div class="interv-group">
+              <h4>Enfants &amp; Jeunesse</h4>
+              <ul class="interv-list enfants">
+                <li>Écoles</li>
+                <li>Centres aérés</li>
+                <li>ADAPEI</li>
+                <li>Activités périscolaires</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Stat séances -->
+        <div class="yoga-stat-banner reveal">
+          <span class="big-number" data-target="500" id="stat-seances">0</span>
+          <p>séances animées avec joie et bienveillance 🎉</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===========================
+         ANIMATRICE
+    =========================== -->
+    <section id="animatrice" class="section" aria-labelledby="anim-title">
+      <div class="container">
+
+        <div class="tag tag-lilas reveal" style="display:block; text-align:center; margin-bottom:16px;">Votre animatrice</div>
+        <h2 id="anim-title" class="section-title reveal">Une passionnée à votre service</h2>
+
+        <div class="animatrice-inner" style="margin-top: 50px;">
+
+          <div class="animatrice-photo">
+            <div class="anim-photo-deco" aria-hidden="true"></div>
+            <div class="placeholder-img anim-photo-box reveal-scale" role="img" aria-label="Portrait de l'animatrice de yoga du rire">
+              [IMAGE 5]
+            </div>
+          </div>
+
+          <div class="animatrice-content reveal">
+
+            <h2 style="font-size: 2rem; margin-bottom: 6px;">Votre Animatrice</h2>
+            <p class="anim-subtitle">Certifiée Yoga du Rire – Région Stéphanoise</p>
+
+            <div class="anim-highlight">
+              <span class="emoji" aria-hidden="true">🌬️</span>
+              <p>Ancienne asthmatique, c'est en découvrant les bienfaits du rire et de la respiration qu'elle a trouvé sa vocation&nbsp;: partager la joie et la légèreté avec le plus grand nombre.</p>
+            </div>
+
+            <p class="anim-story">
+              Formée à l'<strong>Institut Français du Yoga du Rire</strong>, elle est certifiée selon la méthode du <strong>Dr Madan Kataria</strong> et s'est également perfectionnée auprès de <strong>Corine Cosseron</strong>, pionnière du rire en France. Basée en région stéphanoise, elle intervient dans toute la Loire et ses alentours.
+            </p>
+
+            <ul class="certif-list" role="list">
+              <li>
+                <span class="certif-dot certif-dot-lilas" aria-hidden="true"></span>
+                Certifiée Institut Français du Yoga du Rire
+              </li>
+              <li>
+                <span class="certif-dot certif-dot-menthe" aria-hidden="true"></span>
+                Méthode Dr Madan Kataria – fondateur mondial
+              </li>
+              <li>
+                <span class="certif-dot certif-dot-rose" aria-hidden="true"></span>
+                Formation Corine Cosseron – pionnière française
+              </li>
+            </ul>
+
+            <div class="banana-quote" role="note">
+              🍌 "Le rire, c'est comme une banane&nbsp;: ça donne de l'énergie, ça fait du bien, et ça fait toujours sourire les gens !"
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         FAQ
+    =========================== -->
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <div class="container">
+
+        <div class="tag tag-bleu reveal" style="display:block; text-align:center; margin-bottom:16px;">Questions fréquentes</div>
+        <h2 id="faq-title" class="section-title reveal">On vous répond avec le sourire</h2>
+        <p class="section-subtitle reveal">Toutes vos questions sur le yoga du rire, les séances et l'accessibilité.</p>
+
+        <div class="faq-list" role="list">
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-q-text">
+                <span class="faq-num" aria-hidden="true">1</span>
+                Faut-il avoir le sens de l'humour ou savoir raconter des blagues ?
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                Absolument pas&nbsp;! Le yoga du rire ne nécessite aucun humour, aucune blague et aucun talent comique. Le rire est déclenché par des exercices physiques et des jeux de groupe. Votre corps ne fait pas la différence entre un rire forcé et un rire spontané — les bienfaits sont identiques. Et bien souvent, le rire forcé devient très vite spontané et communicatif&nbsp;!
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-q-text">
+                <span class="faq-num" aria-hidden="true">2</span>
+                Comment se passe une séance de yoga du rire ?
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                Une séance se déroule toujours en groupe dans une atmosphère bienveillante et détendue. Elle commence par des échauffements ludiques (claquements de mains, sons joyeux), enchaîne avec des exercices de rires variés, intègre des respirations inspirées du pranayama et se termine par des étirements doux. Durée&nbsp;: entre 45 minutes et 1 heure selon le contexte et le public.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-q-text">
+                <span class="faq-num" aria-hidden="true">3</span>
+                Faut-il être souple ou avoir des capacités physiques particulières ?
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                Non, aucune posture difficile, aucune souplesse requise. Les séances se pratiquent debout ou assis selon les préférences et les capacités de chacun. Les personnes en situation de mobilité réduite ou de handicap sont pleinement intégrées. L'animatrice adapte chaque exercice et vient à vous si nécessaire.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-q-text">
+                <span class="faq-num" aria-hidden="true">4</span>
+                Quelle tenue faut-il prévoir ? Faut-il apporter un tapis ?
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                Portez simplement des vêtements confortables dans lesquels vous vous sentez bien et libre de bouger. Pas besoin de tenue de sport spéciale. Le tapis de yoga est fourni par l'animatrice si la séance inclut des exercices au sol, vous n'avez rien à apporter&nbsp;!
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-q-text">
+                <span class="faq-num" aria-hidden="true">5</span>
+                Quelle est la durée d'une séance ?
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                Une séance dure généralement entre 45 minutes et 1 heure. La durée est adaptée au contexte&nbsp;: une intervention en EHPAD pourra être plus courte (30-45 min), tandis qu'un atelier en entreprise ou une séance EVJF peut s'étendre sur 1h à 1h30. Tout est discuté et personnalisé en amont selon vos besoins.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-q-text">
+                <span class="faq-num" aria-hidden="true">6</span>
+                Est-ce adapté aux personnes âgées ou fragiles ?
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                Oui, absolument&nbsp;! Le yoga du rire est particulièrement bénéfique pour les seniors. L'animatrice intervient régulièrement en EHPAD et auprès de personnes âgées ou fragilisées. Les exercices sont entièrement adaptables en position assise. C'est une activité douce, sans risque, qui apporte joie, stimulation cognitive et lien social — des bienfaits précieux à tout âge.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-q-text">
+                <span class="faq-num" aria-hidden="true">7</span>
+                Peut-on organiser une séance pour un groupe privé ou un événement ?
+              </span>
+              <span class="faq-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                Oui&nbsp;! L'animatrice se déplace pour tout type de groupe privé ou d'événement&nbsp;: anniversaire, EVJF, EVG, réunion d'équipe, séminaire d'entreprise, fête d'association… Un moment original, mémorable et joyeux qui fédère les participants comme aucune autre activité. Contactez-nous pour un devis personnalisé&nbsp;!
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         CONTACT
+    =========================== -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+
+        <div class="tag tag-rose reveal" style="display:block; text-align:center; margin-bottom:16px;">Nous rejoindre</div>
+        <h2 id="contact-title" class="section-title reveal">Parlons-nous !</h2>
+        <p class="section-subtitle reveal">Une question, une envie de séance ou un projet en tête ? Écrivez-nous, nous répondons avec joie et dans les meilleurs délais.</p>
+
+        <div class="contact-inner">
+
+          <!-- FORM -->
+          <div class="contact-form-wrap reveal">
+            <h2 style="margin-bottom:6px;">Votre message</h2>
+            <p class="form-subtitle">Les champs marqués d'un <span style="color:var(--rose-border)">*</span> sont obligatoires.</p>
+
+            <form id="contact-form" novalidate>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="prenom">Prénom <span class="req">*</span></label>
+                  <input type="text" id="prenom" name="prenom" placeholder="Marie" required autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <label for="nom">Nom <span class="req">*</span></label>
+                  <input type="text" id="nom" name="nom" placeholder="Dupont" required autocomplete="family-name" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Adresse email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" placeholder="marie.dupont@exemple.fr" required autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="tel">Téléphone (facultatif)</label>
+                <input type="tel" id="tel" name="tel" placeholder="06 XX XX XX XX" autocomplete="tel" />
+              </div>
+
+              <div class="form-group">
+                <label for="type">Type de demande</label>
+                <select id="type" name="type">
+                  <option value="">Choisissez une option...</option>
+                  <option value="decouverte">Séance découverte</option>
+                  <option value="seance">Réserver une séance</option>
+                  <option value="entreprise">Intervention entreprise</option>
+                  <option value="association">Intervention association</option>
+                  <option value="evjf">Événement EVJF / EVG</option>
+                  <option value="ehpad">Établissement EHPAD</option>
+                  <option value="jeunesse">Jeunesse – ADAPEI</option>
+                  <option value="autre">Autre demande</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Votre message <span class="req">*</span></label>
+                <textarea id="message" name="message" placeholder="Décrivez votre projet, vos questions, vos besoins... Nous lisons tout avec le sourire !" rows="5" required></textarea>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn-primary">
+                  Envoyer mon message 💌
+                </button>
+                <p class="form-note">Réponse sous 48h en jours ouvrés.</p>
+              </div>
+
+              <div id="form-success" role="alert" aria-live="polite">
+                ✅ Votre message a bien été envoyé ! Nous vous répondrons très vite avec le sourire 😊
+              </div>
+
+            </form>
+          </div>
+
+          <!-- ASIDE -->
+          <div class="contact-aside">
+
+            <div class="placeholder-img contact-image reveal-scale" role="img" aria-label="Ambiance joyeuse d'une séance de yoga du rire">
+              [IMAGE 6]
+            </div>
+
+            <div class="contact-info-card reveal">
+              <h3>Nous joindre</h3>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon icon-bg-rose" aria-hidden="true">📧</div>
+                <p>
+                  Email&nbsp;:<br>
+                  <a href="mailto:follederire@yahoo.com">follederire@yahoo.com</a>
+                </p>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon icon-bg-menthe" aria-hidden="true">📍</div>
+                <p>
+                  Zone d'intervention&nbsp;:<br>
+                  Région Stéphanoise et Loire
+                </p>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon icon-bg-bleu" aria-hidden="true">🕐</div>
+                <p>
+                  Réponse sous 48h<br>
+                  en jours ouvrés
+                </p>
+              </div>
+
+            </div>
+
+            <button class="share-btn reveal" id="share-btn" aria-label="Partager ce site">
+              <span aria-hidden="true">🔗</span> Partager Folle de Rire
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===========================
+       FOOTER
+  =========================== -->
+  <footer role="contentinfo">
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <a href="#hero" class="logo" aria-label="Folle de Rire – retour en haut">
+            <div class="logo-box" aria-hidden="true">😄</div>
+            <div class="logo-labels">
+              <span class="logo-main">Folle de Rire</span>
+              <span class="logo-sub">Yoga du Rire</span>
+            </div>
+          </a>
+          <p>Apporter la joie et le lien social partout où c'est possible. Séances de yoga du rire accessibles à tous, de 8 à 99 ans, en région stéphanoise et dans toute la Loire.</p>
+          <a href="mailto:follederire@yahoo.com" class="btn btn-primary" style="font-size:0.85rem; padding:10px 22px;">
+            📧 Nous écrire
+          </a>
+        </div>
+
+        <nav class="footer-nav" aria-label="Navigation footer">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#le-rire">Le Rire</a></li>
+            <li><a href="#yoga-du-rire">Le Yoga du Rire</a></li>
+            <li><a href="#animatrice">Votre Animatrice</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact-col">
+          <h4>Contact</h4>
+          <p>
+            <a href="mailto:follederire@yahoo.com">follederire@yahoo.com</a><br><br>
+            Région Stéphanoise<br>
+            Loire, France<br><br>
+            Interventions en entreprises,<br>
+            associations, EHPAD,<br>
+            écoles, événements.
+          </p>
+        </div>
+
+      </div>
+
+      <hr class="footer-divider" />
+
+      <div class="footer-bottom">
+        <p>© 2024 Folle de Rire – Tous droits réservés</p>
+        <p class="footer-heart">Fait avec ❤️ et beaucoup de rires 😄</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ===========================
+       FLOATING BUTTONS
+  =========================== -->
+  <div class="float-group" aria-label="Actions rapides">
+    <button class="float-btn float-back-top" id="back-top" aria-label="Retour en haut de page" title="Retour en haut">↑</button>
+    <a href="#contact" class="float-btn float-contact" aria-label="Aller au formulaire de contact" title="Contact">💌</a>
+  </div>
+
+  <!-- ===========================
+       SHARE MODAL
+  =========================== -->
+  <div class="modal-overlay" id="share-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Fermer la modale">✕</button>
+      <h3 id="modal-title">Partager Folle de Rire</h3>
+      <p>Partagez la joie du yoga du rire avec vos proches !</p>
+
+      <div class="modal-url-copy">
+        <input type="text" id="share-url" readonly aria-label="URL à copier" />
+        <button id="copy-url-btn">Copier</button>
+      </div>
+
+      <div class="share-options">
+        <button class="share-option" id="share-email" aria-label="Partager par email">
+          <span class="share-icon" aria-hidden="true">📧</span>
+          Email
+        </button>
+        <button class="share-option" id="share-sms" aria-label="Partager par SMS">
+          <span class="share-icon" aria-hidden="true">💬</span>
+          SMS
+        </button>
+        <button class="share-option" id="share-native" aria-label="Autres options de partage">
+          <span class="share-icon" aria-hidden="true">📤</span>
+          Autre
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===========================
+       JAVASCRIPT
+  =========================== -->
+  <script>
+    'use strict';
+
+    /* -------------------------------------------------------
+       UTILITIES
+    ------------------------------------------------------- */
+    const $ = (sel, ctx = document) => ctx.querySelector(sel);
+    const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+
+    /* -------------------------------------------------------
+       HEADER – scroll state + active nav
+    ------------------------------------------------------- */
+    const header = $('#header');
+    const navLinks = $$('.nav-link');
+    const sections = $$('section[id]');
+
+    function onScroll() {
+      // Scrolled state
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+
+      // Back-to-top button
+      const backTop = $('#back-top');
+      if (window.scrollY > 400) {
+        backTop.classList.add('visible');
+      } else {
+        backTop.classList.remove('visible');
+      }
+
+      // Active nav link (highlight current section)
+      let current = '';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 100;
+        if (window.scrollY >= top) current = sec.id;
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* -------------------------------------------------------
+       HAMBURGER MENU
+    ------------------------------------------------------- */
+    const hamburger = $('#hamburger');
+    const mobileNav = $('#mobile-nav');
+
+    function toggleMenu(open) {
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+      if (open) {
+        mobileNav.classList.add('open');
+      } else {
+        mobileNav.classList.remove('open');
+      }
+    }
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.contains('open');
+      toggleMenu(!isOpen);
+    });
+
+    // Close on nav link click
+    $$('.nav-link', mobileNav).forEach(link => {
+      link.addEventListener('click', () => toggleMenu(false));
+    });
+
+    // Close on outside click
+    document.addEventListener('click', e => {
+      if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+        toggleMenu(false);
+      }
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') toggleMenu(false);
+    });
+
+    /* -------------------------------------------------------
+       SMOOTH SCROLL for all anchor links
+    ------------------------------------------------------- */
+    $$('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = $(this.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        const offset = parseInt(getComputedStyle(document.documentElement)
+          .getPropertyValue('--header-h'), 10) || 72;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+
+    /* Back to top */
+    $('#back-top').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* -------------------------------------------------------
+       FAQ ACCORDION
+    ------------------------------------------------------- */
+    $$('.faq-item').forEach(item => {
+      const btn = item.querySelector('.faq-q');
+      const panel = item.querySelector('.faq-a');
+
+      btn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+
+        // Close all others
+        $$('.faq-item').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('open');
+            other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        item.classList.toggle('open', !isOpen);
+        btn.setAttribute('aria-expanded', !isOpen);
+      });
+    });
+
+    /* -------------------------------------------------------
+       COUNTER ANIMATION
+    ------------------------------------------------------- */
+    function animateCounter(el, target, suffix = '') {
+      const duration = 2000;
+      const startTime = performance.now();
+
+      function update(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Easing: ease-out-quad
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = Math.round(eased * target);
+        el.textContent = value.toLocaleString('fr-FR') + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    let countersStarted = false;
+
+    function startCounters() {
+      if (countersStarted) return;
+
+      const statParticipants = $('#stat-participants');
+      const statAnnees       = $('#stat-annees');
+      const statSatisfaction = $('#stat-satisfaction');
+      const statSeances      = $('#stat-seances');
+
+      if (statParticipants) animateCounter(statParticipants, 1500);
+      if (statAnnees)       animateCounter(statAnnees, 5);
+      if (statSatisfaction) {
+        // Special case: 100%
+        const duration = 2000;
+        const startTime = performance.now();
+        (function update(now) {
+          const p = Math.min((now - startTime) / duration, 1);
+          const v = Math.round((1 - Math.pow(1 - p, 3)) * 100);
+          statSatisfaction.textContent = v + '%';
+          if (p < 1) requestAnimationFrame(update);
+        })(performance.now());
+      }
+      if (statSeances) animateCounter(statSeances, 500);
+
+      countersStarted = true;
+    }
+
+    /* -------------------------------------------------------
+       INTERSECTION OBSERVER – reveal animations + counters
+    ------------------------------------------------------- */
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    $$('.reveal, .reveal-scale').forEach(el => revealObs.observe(el));
+
+    // Counter trigger (when stats section enters viewport)
+    const statsSection = $('#stats');
+    if (statsSection) {
+      const counterObs = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          startCounters();
+          counterObs.disconnect();
+        }
+      }, { threshold: 0.3 });
+      counterObs.observe(statsSection);
+    }
+
+    // Also trigger seances counter when yoga section is visible
+    const yogaSection = $('#yoga-du-rire');
+    if (yogaSection) {
+      const yogaObs = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          const el = $('#stat-seances');
+          if (el && el.textContent === '0') animateCounter(el, 500);
+          yogaObs.disconnect();
+        }
+      }, { threshold: 0.3 });
+      yogaObs.observe(yogaSection);
+    }
+
+    /* -------------------------------------------------------
+       CONTACT FORM – mailto fallback
+    ------------------------------------------------------- */
+    const contactForm = $('#contact-form');
+    const formSuccess = $('#form-success');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const prenom  = $('#prenom').value.trim();
+      const nom     = $('#nom').value.trim();
+      const email   = $('#email').value.trim();
+      const tel     = $('#tel').value.trim();
+      const type    = $('#type').value;
+      const message = $('#message').value.trim();
+
+      // Basic validation
+      if (!prenom || !nom || !email || !message) {
+        // Highlight empty required fields
+        ['prenom', 'nom', 'email', 'message'].forEach(id => {
+          const field = document.getElementById(id);
+          if (!field.value.trim()) {
+            field.style.borderColor = '#F4A7B9';
+            field.addEventListener('input', () => {
+              field.style.borderColor = '';
+            }, { once: true });
+          }
+        });
+        return;
+      }
+
+      // Build mailto
+      const typeLabels = {
+        decouverte: 'Séance découverte',
+        seance:     'Réserver une séance',
+        entreprise: 'Intervention entreprise',
+        association:'Intervention association',
+        evjf:       'Événement EVJF / EVG',
+        ehpad:      'Établissement EHPAD',
+        jeunesse:   'Jeunesse – ADAPEI',
+        autre:      'Autre demande'
+      };
+
+      const typeLabel = typeLabels[type] || 'Non précisé';
+      const subject   = encodeURIComponent('Demande depuis follederire.fr – ' + prenom + ' ' + nom);
+      const body      = encodeURIComponent(
+        'Prénom : ' + prenom + '\n' +
+        'Nom : '    + nom    + '\n' +
+        'Email : '  + email  + '\n' +
+        'Téléphone : ' + (tel || 'Non renseigné') + '\n' +
+        'Type de demande : ' + typeLabel + '\n\n' +
+        'Message :\n' + message
+      );
+
+      const mailtoLink = 'mailto:follederire@yahoo.com?subject=' + subject + '&body=' + body;
+
+      // Open mailto
+      window.location.href = mailtoLink;
+
+      // Show success message
+      formSuccess.style.display = 'block';
+      contactForm.reset();
+
+      // Scroll to success
+      setTimeout(() => {
+        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 200);
+
+      // Hide after 8 seconds
+      setTimeout(() => {
+        formSuccess.style.display = 'none';
+      }, 8000);
+    });
+
+    /* -------------------------------------------------------
+       SHARE MODAL
+    ------------------------------------------------------- */
+    const shareModal  = $('#share-modal');
+    const shareBtn    = $('#share-btn');
+    const modalClose  = $('#modal-close');
+    const shareUrlInput = $('#share-url');
+    const copyUrlBtn  = $('#copy-url-btn');
+
+    function openModal() {
+      shareUrlInput.value = window.location.href;
+      shareModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      modalClose.focus();
+    }
+
+    function closeModal() {
+      shareModal.classList.remove('open');
+      document.body.style.overflow = '';
+      shareBtn.focus();
+    }
+
+    shareBtn.addEventListener('click', openModal);
+    modalClose.addEventListener('click', closeModal);
+
+    shareModal.addEventListener('click', e => {
+      if (e.target === shareModal) closeModal();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && shareModal.classList.contains('open')) closeModal();
+    });
+
+    // Copy URL
+    copyUrlBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        copyUrlBtn.textContent = 'Copié !';
+        setTimeout(() => { copyUrlBtn.textContent = 'Copier'; }, 2500);
+      }).catch(() => {
+        shareUrlInput.select();
+        document.execCommand('copy');
+        copyUrlBtn.textContent = 'Copié !';
+        setTimeout(() => { copyUrlBtn.textContent = 'Copier'; }, 2500);
+      });
+    });
+
+    // Share by email
+    $('#share-email').addEventListener('click', () => {
+      const subject = encodeURIComponent('Découvrez Folle de Rire – Yoga du Rire !');
+      const body = encodeURIComponent(
+        'Salut !\n\nJe voulais te partager ce super site sur le yoga du rire : ' +
+        window.location.href +
+        '\n\nUne activité accessible à tous, pour rire, se détendre et créer du lien. À bientôt !'
+      );
+      window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
+    });
+
+    // Share by SMS
+    $('#share-sms').addEventListener('click', () => {
+      const text = encodeURIComponent('Découvrez Folle de Rire – Yoga du Rire ! ' + window.location.href);
+      window.location.href = 'sms:?body=' + text;
+    });
+
+    // Native share API
+    $('#share-native').addEventListener('click', () => {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Folle de Rire – Yoga du Rire',
+          text:  'Une méthode douce et joyeuse pour retrouver votre énergie vitale !',
+          url:   window.location.href
+        }).catch(() => {});
+      } else {
+        // Fallback: copy to clipboard
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          $('#share-native').innerHTML = '<span class="share-icon" aria-hidden="true">✅</span>Copié !';
+        });
+      }
+    });
+
+    /* -------------------------------------------------------
+       STAGGER reveal delays for grid children
+    ------------------------------------------------------- */
+    function staggerReveal(parentSelector, childSelector) {
+      $$(parentSelector).forEach(parent => {
+        $$(childSelector, parent).forEach((child, i) => {
+          child.style.transitionDelay = (i * 0.12) + 's';
+        });
+      });
+    }
+
+    staggerReveal('.rire-cards', '.card');
+    staggerReveal('.yoga-grid', '.card');
+    staggerReveal('.stats-inner', '.stat-item');
+
+    /* -------------------------------------------------------
+       SUBTLE PARALLAX on hero blobs (mouse move)
+    ------------------------------------------------------- */
+    const heroSection = $('#hero');
+    if (heroSection) {
+      heroSection.addEventListener('mousemove', e => {
+        const blob = $('.hero-img-blob');
+        if (!blob) return;
+        const rect = heroSection.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width  - 0.5;
+        const y = (e.clientY - rect.top)  / rect.height - 0.5;
+        blob.style.transform = `translate(${x * 20}px, ${y * 20}px)`;
+      });
+
+      heroSection.addEventListener('mouseleave', () => {
+        const blob = $('.hero-img-blob');
+        if (blob) blob.style.transform = '';
+      });
+    }
+
+  </script>
+
+</body>
+</html>

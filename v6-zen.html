@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folle de Rire - Yoga du Rire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --beige:#F5F0E8;
+            --charcoal:#3A3A3A;
+            --bamboo:#8B9A6B;
+            --terracotta:#C4956A;
+            --offwhite:#FEFDF8;
+            --sand:#E8E0D4;
+            --stone:#6B6560;
+            --light-bamboo:rgba(139,154,107,.12);
+            --light-terracotta:rgba(196,149,106,.1);
+            --font-main:'Quicksand',sans-serif;
+            --font-serif:'Noto Serif JP',serif;
+            --header-h:72px
+        }
+        html{scroll-behavior:smooth}
+        body{font-family:var(--font-main);background:var(--offwhite);color:var(--charcoal);line-height:1.8;overflow-x:hidden}
+        .container{max-width:1080px;margin:0 auto;padding:0 2.5rem}
+        .hero-circle,.oval-img,.portrait,.cert-img{display:flex;align-items:center;justify-content:center;font-family:'Caveat',cursive;font-size:1.3rem;font-weight:700;overflow:hidden}
+
+        /* ── Header ── */
+        #header{background:rgba(254,253,248,.92);backdrop-filter:blur(12px);position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--header-h);transition:all .4s}
+        .nav-wrapper{display:flex;justify-content:space-between;align-items:center;height:var(--header-h)}
+        .logo{font-family:var(--font-serif);font-size:1.5rem;color:var(--charcoal);font-weight:400;letter-spacing:2px}
+        .main-nav{display:flex;gap:2.5rem}
+        .main-nav a{color:var(--stone);text-decoration:none;font-weight:500;font-size:.78rem;padding:.3rem 0;position:relative;transition:color .4s;text-transform:uppercase;letter-spacing:2.5px}
+        .main-nav a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--charcoal);transition:width .4s ease}
+        .main-nav a:hover::after,.main-nav a.active::after{width:100%}
+        .main-nav a:hover,.main-nav a.active{color:var(--charcoal)}
+        .mobile-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.5rem}
+        .mobile-toggle span{width:22px;height:1px;background:var(--charcoal);transition:all .3s}
+        .header-line{position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--sand);opacity:0;transition:opacity .4s}
+        .header-scrolled .header-line{opacity:1}
+
+        /* ── Hero ── */
+        #hero{margin-top:var(--header-h);padding:8rem 0 6rem;background:var(--offwhite);text-align:center;overflow:hidden}
+        .hero-content{display:flex;flex-direction:column;align-items:center;gap:3rem}
+        .hero-wrap{position:relative;display:inline-block}
+        .hero-circle{width:280px;height:280px;border-radius:50%;overflow:hidden;border:1px solid var(--sand)}
+        .badge{position:absolute;top:5px;right:-90px;background:var(--offwhite);padding:1rem 1.2rem;border:1px solid var(--sand);text-align:center;max-width:160px}
+        .badge-emojis{font-size:1.4rem;margin-bottom:.3rem}
+        .badge-emojis span{display:inline-block}
+        .badge-text{font-family:var(--font-serif);font-size:.85rem;color:var(--stone);font-weight:300;letter-spacing:.5px}
+        .hero-slogan{font-family:var(--font-serif);font-size:2.2rem;max-width:620px;line-height:1.6;color:var(--charcoal);font-weight:300;letter-spacing:.5px}
+        .hero-subtitle{font-size:1rem;max-width:560px;color:var(--stone);font-weight:400;line-height:2;opacity:0;animation:zen-fade 1.2s ease forwards .4s}
+        .hero-cta{display:inline-block;color:var(--charcoal);padding:.8rem 2.2rem;border:1px solid var(--charcoal);text-decoration:none;font-weight:500;font-size:.82rem;letter-spacing:2px;text-transform:uppercase;transition:all .4s;opacity:0;animation:zen-fade 1.2s ease forwards .7s}
+        .hero-cta:hover{background:var(--charcoal);color:var(--offwhite)}
+        @keyframes zen-fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+
+        /* ── Separator ── */
+        .h-line{width:60px;height:1px;background:var(--sand);margin:0 auto}
+
+        /* ── Stats ── */
+        .stats-section{padding:4rem 0;background:var(--beige)}
+        .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:720px;margin:0 auto}
+        .stat-card{text-align:center;padding:2rem 1rem}
+        .stat-number{font-family:var(--font-serif);font-size:2.8rem;font-weight:300;color:var(--charcoal);letter-spacing:2px}
+        .stat-label{font-size:.75rem;font-weight:500;text-transform:uppercase;letter-spacing:2.5px;color:var(--stone);margin-top:.3rem}
+
+        /* ── Sections ── */
+        section{padding:6rem 0;scroll-margin-top:calc(var(--header-h) + 20px)}
+        .section-title{font-family:var(--font-serif);font-size:1.6rem;text-align:center;margin-bottom:.8rem;font-weight:300;color:var(--charcoal);letter-spacing:3px;text-transform:lowercase}
+        .section-line{width:40px;height:1px;background:var(--terracotta);margin:0 auto 4rem}
+
+        /* ── Le Rire ── */
+        #le-rire{background:var(--offwhite)}
+        .rire-content{display:grid;grid-template-columns:200px 1fr;gap:4rem}
+        .rire-images{display:flex;flex-direction:column;gap:1.5rem}
+        .oval-img{width:100%;aspect-ratio:3/4;border-radius:50%/55%;overflow:hidden;border:1px solid var(--sand);transition:opacity .6s}
+        .oval-img:hover{opacity:.85}
+        .benefit-cards{display:flex;flex-direction:column}
+        .benefit-card{padding:2.2rem 0;border-bottom:1px solid var(--sand);transition:padding-left .4s}
+        .benefit-card:first-child{padding-top:0}
+        .benefit-card:last-child{border-bottom:none}
+        .benefit-card:hover{padding-left:.8rem}
+        .benefit-card h3{font-family:var(--font-serif);font-size:1.15rem;margin-bottom:.8rem;color:var(--charcoal);font-weight:400;letter-spacing:.5px}
+        .benefit-card p{font-size:.92rem;line-height:2;color:var(--stone)}
+
+        /* ── Yoga du Rire ── */
+        #yoga-du-rire{background:var(--beige)}
+        .yoga-intro{max-width:700px;margin:0 auto 4rem;text-align:center;font-size:1rem;line-height:2.2;color:var(--stone)}
+        .yoga-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+        .yoga-block{background:var(--offwhite);padding:2.5rem 2rem;border:1px solid var(--sand);transition:border-color .4s}
+        .yoga-block:hover{border-color:var(--terracotta)}
+        .yoga-block h3{font-family:var(--font-serif);font-size:1.05rem;color:var(--charcoal);margin-bottom:1.2rem;font-weight:400;letter-spacing:.5px}
+        .yoga-block p{font-size:.9rem;line-height:2;color:var(--stone)}
+        .yoga-counter{text-align:center;margin-top:4rem;padding-top:3rem;border-top:1px solid var(--sand);max-width:300px;margin-left:auto;margin-right:auto}
+
+        /* ── Animatrice ── */
+        #animatrice{background:var(--offwhite)}
+        .anim-content{display:grid;grid-template-columns:1fr 2fr 1fr;gap:3.5rem;align-items:start}
+        .portrait{width:100%;max-width:220px;aspect-ratio:3/4;border-radius:50%/55%;overflow:hidden;border:1px solid var(--sand);margin:0 auto}
+        .story-box p{margin-bottom:1.5rem;font-size:.95rem;line-height:2.2;color:var(--stone)}
+        .story-box p:last-child{margin-bottom:0}
+        .ref-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2.5rem}
+        .ref-box{background:var(--beige);padding:1.5rem;border:1px solid var(--sand)}
+        .ref-box h4{font-family:var(--font-serif);font-size:1rem;margin-bottom:.4rem;font-weight:400;letter-spacing:.3px}
+        .ref-box p{font-size:.85rem;color:var(--stone);line-height:1.8}
+        .anim-extras{display:flex;flex-direction:column;gap:2rem}
+        .banana-badge{text-align:center;padding:2rem 1rem}
+        .banana-icon{font-size:2.8rem;display:block;margin-bottom:.5rem}
+        .banana-text{font-family:var(--font-serif);font-size:1rem;font-weight:300;color:var(--stone);letter-spacing:.5px}
+        .quote-box{padding:2rem;text-align:center;border-left:1px solid var(--terracotta);background:var(--beige)}
+        .quote-text{font-family:var(--font-serif);font-size:1.05rem;font-style:italic;line-height:1.8;color:var(--charcoal);font-weight:300}
+
+        /* ── FAQ ── */
+        #faq{background:var(--beige)}
+        .faq-container{max-width:720px;margin:0 auto}
+        .faq-item{border-bottom:1px solid var(--sand)}
+        .faq-question{width:100%;background:none;border:none;padding:1.5rem 0;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-serif);font-size:1rem;color:var(--charcoal);font-weight:400;transition:color .3s;letter-spacing:.3px}
+        .faq-question:hover{color:var(--terracotta)}
+        .faq-icon{font-size:1.2rem;color:var(--stone);transition:transform .4s;font-weight:300}
+        .faq-item.active .faq-icon{transform:rotate(45deg)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .5s ease}
+        .faq-item.active .faq-answer{max-height:500px;padding:0 0 1.5rem}
+        .faq-answer p{line-height:2;font-size:.9rem;color:var(--stone)}
+
+        /* ── Contact ── */
+        #contact{background:var(--offwhite)}
+        .contact-grid{display:grid;grid-template-columns:300px 1fr;gap:4rem;max-width:960px;margin:0 auto}
+        .contact-info h3{font-family:var(--font-serif);font-size:1.1rem;margin-bottom:.8rem;font-weight:400;letter-spacing:.5px}
+        .diploma-text{font-weight:500;font-size:.95rem;margin-bottom:2rem;color:var(--stone);line-height:1.8}
+        .contact-details p{margin-bottom:1rem;color:var(--stone);font-size:.92rem;line-height:1.8}
+        .contact-details a{color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--sand);transition:border-color .3s}
+        .contact-details a:hover{border-color:var(--charcoal)}
+        .cert-img{margin-top:2rem;width:100%;aspect-ratio:3/4;overflow:hidden;border:1px solid var(--sand);display:none}
+        .form-container{padding:0}
+        .form-title{font-family:var(--font-serif);font-size:1.4rem;margin-bottom:.3rem;font-weight:300;letter-spacing:1px}
+        .form-subtitle{font-size:.88rem;color:var(--stone);margin-bottom:2.5rem}
+        .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+        .form-group{display:flex;flex-direction:column;gap:.5rem}
+        .form-group.full{grid-column:1/-1}
+        .form-group label{font-weight:500;font-size:.75rem;text-transform:uppercase;letter-spacing:2px;color:var(--stone)}
+        .form-group input,.form-group select,.form-group textarea{padding:.9rem 1rem;border:1px solid var(--sand);font-family:var(--font-main);font-size:.92rem;color:var(--charcoal);transition:border-color .4s;background:var(--offwhite);-webkit-appearance:none;border-radius:0}
+        .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--charcoal)}
+        .form-group textarea{resize:vertical;min-height:110px}
+        .form-submit{grid-column:1/-1;background:transparent;color:var(--charcoal);padding:.9rem 2rem;border:1px solid var(--charcoal);font-weight:500;font-size:.8rem;cursor:pointer;letter-spacing:2.5px;text-transform:uppercase;transition:all .4s;font-family:var(--font-main);border-radius:0}
+        .form-submit:hover{background:var(--charcoal);color:var(--offwhite)}
+
+        /* ── Footer ── */
+        #footer{background:var(--charcoal);padding:5rem 0 2rem;color:rgba(255,255,255,.5)}
+        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem;margin-bottom:3rem}
+        .footer-logo{font-family:var(--font-serif);font-size:1.8rem;color:rgba(255,255,255,.85);font-weight:300;letter-spacing:2px}
+        .footer-tagline{font-size:.85rem;color:rgba(255,255,255,.35);margin-top:.5rem;line-height:1.8}
+        .footer-title{font-family:var(--font-serif);font-size:.85rem;margin-bottom:1rem;color:rgba(255,255,255,.6);font-weight:400;text-transform:uppercase;letter-spacing:2px}
+        .footer-link{color:rgba(255,255,255,.4);text-decoration:none;display:block;margin-bottom:.5rem;transition:color .3s;font-size:.88rem}
+        .footer-link:hover{color:rgba(255,255,255,.8)}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;text-align:center;font-size:.75rem;color:rgba(255,255,255,.25);letter-spacing:1px}
+
+        /* ── Floating ── */
+        .floating{position:fixed;bottom:30px;right:30px;display:flex;flex-direction:column;gap:.8rem;z-index:999}
+        .float-btn{width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid var(--sand);transition:all .3s;text-decoration:none;border-radius:0}
+        .wa-btn{background:#25D366;border-color:#25D366}
+        .wa-btn svg{width:22px;height:22px;fill:white}
+        .share-btn{background:var(--offwhite);font-size:1.1rem;color:var(--charcoal)}
+        .share-btn:hover{background:var(--beige)}
+        .top-btn{background:var(--offwhite);color:var(--charcoal);font-size:1.1rem;opacity:0;visibility:hidden;transition:all .4s}
+        .top-btn.visible{opacity:1;visibility:visible}
+        .float-btn:hover{transform:translateY(-2px)}
+
+        /* ── Share Modal ── */
+        .share-overlay{position:fixed;inset:0;background:rgba(58,58,58,.3);z-index:1001;opacity:0;visibility:hidden;transition:all .4s}
+        .share-overlay.active{opacity:1;visibility:visible}
+        .share-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.95);background:var(--offwhite);padding:3rem;border:1px solid var(--sand);z-index:1002;opacity:0;visibility:hidden;transition:all .4s;min-width:300px;max-width:calc(100vw - 2rem)}
+        .share-modal.active{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+        .share-modal h3{font-family:var(--font-serif);font-size:1.2rem;text-align:center;margin-bottom:2rem;font-weight:300;letter-spacing:2px}
+        .share-close{position:absolute;top:15px;right:15px;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--stone);transition:color .3s}
+        .share-close:hover{color:var(--charcoal)}
+        .share-options{display:flex;flex-direction:column;gap:.6rem}
+        .share-opt{display:flex;align-items:center;gap:.8rem;padding:.75rem 1.2rem;text-decoration:none;color:white;font-weight:500;transition:all .3s;border:none;cursor:pointer;font-family:var(--font-main);font-size:.85rem;letter-spacing:.5px;border-radius:0}
+        .share-opt:hover{opacity:.85}
+        .share-opt.fb{background:#1877f2}.share-opt.tw{background:#1a1a1a}.share-opt.li{background:#0077b5}
+        .share-opt.cp{background:var(--terracotta)}
+
+        /* ── Scroll Reveal ── */
+        .sr{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+        .sr.visible{opacity:1;transform:translateY(0)}
+
+        /* ── Responsive ── */
+        @media(max-width:968px){
+            .rire-content,.anim-content,.contact-grid,.yoga-grid{grid-template-columns:1fr}
+            .rire-images{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:1rem}
+            .oval-img{width:130px;aspect-ratio:1;border-radius:50%}
+            .ref-grid,.footer-grid{grid-template-columns:1fr}
+            .footer-grid{text-align:center}
+            .stats-grid{grid-template-columns:repeat(2,1fr)}
+            .badge{position:static;margin-top:1.5rem;max-width:100%;display:inline-block}
+            .anim-extras{order:-1;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:1.5rem}
+            .anim-extras>*{flex:1;min-width:200px}
+            .cert-img{display:block}
+            .contact-form{grid-template-columns:1fr}
+            .contact-grid{gap:3rem}
+        }
+        @media(max-width:768px){
+            .mobile-toggle{display:flex}
+            .main-nav{position:fixed;top:var(--header-h);left:0;right:0;background:rgba(254,253,248,.98);backdrop-filter:blur(12px);flex-direction:column;padding:2rem;transform:translateY(-110%);transition:transform .4s ease;border-bottom:1px solid var(--sand)}
+            .main-nav.active{transform:translateY(0)}
+            .main-nav a{width:100%;text-align:center;padding:1rem 0}
+            .hero-circle{width:220px;height:220px}
+            .hero-slogan{font-size:1.6rem}
+            .section-title{font-size:1.4rem}
+            .stats-grid{grid-template-columns:1fr}
+            section{padding:4rem 0}
+            #hero{padding:5rem 0 4rem}
+        }
+        @media(max-width:480px){
+            .container{padding:0 1.5rem}
+            .hero-circle{width:190px;height:190px}
+            .hero-slogan{font-size:1.35rem}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="header-line"></div>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">follederire</div>
+                <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+                <nav class="main-nav">
+                    <a href="#le-rire">LE RIRE</a>
+                    <a href="#yoga-du-rire">LE YOGA DU RIRE</a>
+                    <a href="#animatrice">VOTRE ANIMATRICE</a>
+                    <a href="#contact">CONTACT</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-wrap">
+                    <div class="hero-circle" style="background:linear-gradient(135deg,#F5F0E8,#E8E0D4)">[IMAGE 1]</div>
+                    <div class="badge">
+                        <div class="badge-emojis"><span>😄</span> <span>🎈</span> <span>😊</span></div>
+                        <p class="badge-text">retrouvez votre âme d'enfant</p>
+                    </div>
+                </div>
+                <h1 class="hero-slogan">Redécouvrez la joie de rire et créez du lien social en renforçant la cohésion de groupe.</h1>
+                <p class="hero-subtitle">Une méthode douce et joyeuse accessible à tous, de 8 à 99 ans, pour libérer le stress et retrouver votre énergie vitale.</p>
+                <a href="#le-rire" class="hero-cta">Découvrir les bienfaits</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="1500">0</div>
+                    <div class="stat-label">Participants heureux</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Années d'expérience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">% de satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Le Rire -->
+    <section id="le-rire">
+        <div class="container">
+            <h2 class="section-title">à propos du rire</h2>
+            <div class="section-line"></div>
+            <div class="rire-content">
+                <div class="rire-images">
+                    <div class="oval-img" style="background:linear-gradient(135deg,#E8E0D4,#C4956A33)">[IMAGE 2]</div>
+                    <div class="oval-img" style="background:linear-gradient(135deg,#8B9A6B33,#F5F0E8)">[IMAGE 3]</div>
+                    <div class="oval-img" style="background:linear-gradient(135deg,#C4956A33,#E8E0D4)">[IMAGE 4]</div>
+                </div>
+                <div class="benefit-cards">
+                    <div class="benefit-card sr">
+                        <h3>Votre antidote naturel au stress</h3>
+                        <p>Le rire libère un cocktail d'endorphines et fait fondre le cortisol. Résultat ? Une vague immédiate de bien-être, de légèreté et de détente profonde qui vous accompagne bien après la séance.</p>
+                    </div>
+                    <div class="benefit-card sr">
+                        <h3>Un cœur qui bat la joie</h3>
+                        <p>Rire 10-15 minutes équivaut à 30 minutes de vélo. Le rire fait travailler le cœur en douceur, améliore la circulation et oxygène chaque cellule. L'exercice cardiovasculaire le plus joyeux.</p>
+                    </div>
+                    <div class="benefit-card sr">
+                        <h3>Votre bouclier immunitaire naturel</h3>
+                        <p>Le rire stimule la production d'anticorps et active vos cellules immunitaires. Une pratique régulière, c'est une armure naturelle joyeuse contre les petits maux du quotidien.</p>
+                    </div>
+                    <div class="benefit-card sr">
+                        <h3>Accessible à tous, y compris aux personnes à mobilité réduite</h3>
+                        <p>Pas besoin d'être souple ni de réaliser des postures difficiles. Tous les exercices sont adaptables : debout ou assis sur une chaise. L'animatrice se déplace vers les personnes qui ne peuvent pas bouger.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yoga du Rire -->
+    <section id="yoga-du-rire">
+        <div class="container">
+            <h2 class="section-title">venez faire du yoga du rire</h2>
+            <div class="section-line"></div>
+            <div class="yoga-intro sr">
+                <p>Le yoga du rire combine échauffements ludiques, exercices de rires, exercices de respirations et étirements doux. Accessible de 8 à 99 ans. Votre corps ne fait pas la différence entre rire spontané et rire provoqué : les bienfaits sont identiques.</p>
+            </div>
+            <div class="yoga-grid">
+                <div class="yoga-block sr">
+                    <h3>Accessible à tous</h3>
+                    <p>Aucune condition physique requise, pas besoin d'être souple, aucune posture difficile. Debout ou assis, selon vos besoins. Parfaitement adapté aux personnes à mobilité réduite et en situation de handicap.</p>
+                </div>
+                <div class="yoga-block sr">
+                    <h3>Une expérience qui crée du lien</h3>
+                    <p>On rit sans blagues, dans un cadre ludique et bienveillant. Le yoga du rire crée du lien social et de la bonne entente. Chacun s'exprime librement et retrouve sa joie de vivre.</p>
+                </div>
+                <div class="yoga-block sr">
+                    <h3>Où intervenir</h3>
+                    <p>Associations, entreprises, hôpitaux, EHPAD, événements privés (EVJF, EVG, anniversaires).</p>
+                    <p style="margin-top:.8rem"><strong>Enfants et jeunes :</strong> Écoles, centres aérés, ADAPEI, structures jeunesse. Gestion des émotions, cohésion et confiance en soi.</p>
+                </div>
+            </div>
+            <div class="yoga-counter">
+                <div class="stat-number" data-target="500">0</div>
+                <div class="stat-label">Séances données</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animatrice -->
+    <section id="animatrice">
+        <div class="container">
+            <h2 class="section-title">pourquoi je suis devenue animatrice</h2>
+            <div class="section-line"></div>
+            <div class="anim-content">
+                <div>
+                    <div class="portrait" style="background:linear-gradient(135deg,#F5F0E8,#8B9A6B33)">[IMAGE 5]</div>
+                </div>
+                <div>
+                    <div class="story-box sr">
+                        <p>Il y a quelques années, j'ai découvert le yoga du rire presque par hasard. Sceptique au début — rire sans raison, vraiment ? — j'ai osé franchir la porte d'une première séance.</p>
+                        <p>Ce qui m'a convaincue : une nette amélioration de mon asthme, un sommeil plus profond, et cette légèreté retrouvée au quotidien.</p>
+                        <p>Je me suis formée auprès de l'<strong>Institut Français du Yoga du Rire &amp; Rire Santé</strong>. Ma mission : apporter plus de séances dans la région stéphanoise et vous aider à retrouver VOTRE rire.</p>
+                    </div>
+                    <div class="ref-grid">
+                        <div class="ref-box sr">
+                            <h4>Dr Madan Kataria</h4>
+                            <p>Créateur du yoga du rire en 1995 à Mumbai. Pratiqué dans plus de 100 pays.</p>
+                        </div>
+                        <div class="ref-box sr">
+                            <h4>Corinne Cosseron</h4>
+                            <p>Pionnière en France. Fondatrice de l'École Internationale du Rire.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="anim-extras">
+                    <div class="banana-badge sr">
+                        <span class="banana-icon">🍌</span>
+                        <p class="banana-text">j'ai retrouvé la banane</p>
+                    </div>
+                    <div class="quote-box sr">
+                        <p class="quote-text">"Le yoga du rire n'est pas une théorie, c'est une pratique"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">questions fréquentes</h2>
+            <div class="section-line"></div>
+            <div class="faq-container">
+                <div class="faq-item sr">
+                    <button class="faq-question"><span>Faut-il avoir le sens de l'humour ?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Non. On ne rit pas à cause de blagues. Le rire est provoqué par des exercices ludiques. Votre corps ne distingue pas vrai rire et rire simulé : mêmes bienfaits.</p></div>
+                </div>
+                <div class="faq-item sr">
+                    <button class="faq-question"><span>Pourquoi venir rire dans une séance ?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Le rire en groupe est plus puissant et contagieux. Le yoga du rire se pratique toujours en groupe — c'est l'énergie collective qui rend l'expérience si puissante.</p></div>
+                </div>
+                <div class="faq-item sr">
+                    <button class="faq-question"><span>Pourquoi parle-t-on de yoga du rire ? Y a-t-il des postures ?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Non. Le « yoga » fait référence à la respiration consciente. Aucune posture compliquée, pas besoin d'être souple. Debout ou assis selon votre confort.</p></div>
+                </div>
+                <div class="faq-item sr">
+                    <button class="faq-question"><span>Que porter pour une séance ?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Vêtements confortables. Pour la relaxation, un tapis ou couverture (fourni sur demande).</p></div>
+                </div>
+                <div class="faq-item sr">
+                    <button class="faq-question"><span>Combien de temps dure une séance ?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>45 min à 1h : échauffements ludiques, exercices de rires, respirations et étirements doux.</p></div>
+                </div>
+                <div class="faq-item sr">
+                    <button class="faq-question"><span>Le yoga du rire convient-il aux personnes âgées ?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Oui. Très apprécié en EHPAD. Debout ou assis, activité douce pour le lien social et le bien-être.</p></div>
+                </div>
+                <div class="faq-item sr">
+                    <button class="faq-question"><span>Le yoga du rire se pratique-t-il toujours en groupe ?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Oui. Toujours en groupe. Venez seul(e) ou organisez une séance privée pour famille, amis, association ou entreprise.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">contact</h2>
+            <div class="section-line"></div>
+            <div class="contact-grid">
+                <div class="contact-info sr">
+                    <h3>Diplômée par</h3>
+                    <p class="diploma-text">L'Institut Français du Yoga du Rire &amp; Rire Santé</p>
+                    <div class="contact-details">
+                        <p><strong>Email</strong><br>follederire@yahoo.com</p>
+                        <p><strong>Site</strong><br><a href="https://www.yoga-du-rire-observatoire.info/" target="_blank">yoga-du-rire-observatoire.info</a></p>
+                    </div>
+                    <div class="cert-img" style="background:linear-gradient(135deg,#E8E0D4,#F5F0E8)">[IMAGE 6]</div>
+                </div>
+                <div class="form-container sr">
+                    <h3 class="form-title">Contactez-moi</h3>
+                    <p class="form-subtitle">Je vous répondrai dans les plus brefs délais.</p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom et Prénom</label>
+                            <input type="text" id="name" name="name" required placeholder="Dupont Jean">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="jean@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78">
+                        </div>
+                        <div class="form-group">
+                            <label for="session-type">Type de demande</label>
+                            <select id="session-type" name="session-type" required>
+                                <option value="">Choisissez</option>
+                                <option value="decouverte">Séance découverte</option>
+                                <option value="seance">Réserver une séance</option>
+                                <option value="entreprise">Animation entreprise</option>
+                                <option value="association">Animation associative</option>
+                                <option value="prive">Événement privé (EVJF, EVG...)</option>
+                                <option value="etablissement">Établissement (EHPAD, hôpital...)</option>
+                                <option value="jeunesse">Jeunesse (école, ADAPEI...)</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group full">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required rows="5" placeholder="Parlez-moi de votre projet..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h2 class="footer-logo">follederire</h2>
+                    <p class="footer-tagline">Le rire est le plus court chemin vers le bonheur</p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Contact</h3>
+                    <p class="footer-link">follederire@yahoo.com</p>
+                    <a href="https://www.yoga-du-rire-observatoire.info/" target="_blank" class="footer-link">yoga-du-rire-observatoire.info</a>
+                </div>
+                <div>
+                    <h3 class="footer-title">Navigation</h3>
+                    <a href="#le-rire" class="footer-link">Le Rire</a>
+                    <a href="#yoga-du-rire" class="footer-link">Le Yoga du Rire</a>
+                    <a href="#animatrice" class="footer-link">Votre Animatrice</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 follederire &ndash; Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating buttons -->
+    <div class="floating">
+        <a href="https://wa.me/33612345678" target="_blank" class="float-btn wa-btn" aria-label="WhatsApp">
+            <svg viewBox="0 0 32 32"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.825.737 5.487 2.025 7.788L0 31l7.425-1.988A15.92 15.92 0 0016 31c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.15c-2.438 0-4.75-.65-6.75-1.825l-.487-.3-4.763 1.275 1.275-4.6-.325-.513A13.01 13.01 0 013 16C3 8.82 8.82 3 16 3s13 5.82 13 13-5.82 13.15-13 13.15zm7.588-9.325c-.362-.188-2.15-1.063-2.488-1.188-.338-.112-.587-.162-.838.188-.25.338-.962 1.188-1.175 1.437-.213.238-.438.275-.8.075-.375-.188-1.563-.575-2.975-1.838-1.1-.987-1.838-2.2-2.063-2.563-.213-.362-.025-.562.163-.737.163-.163.363-.438.55-.65.175-.212.238-.363.35-.613.113-.25.063-.462-.037-.65-.1-.188-.838-2.025-1.15-2.775-.3-.738-.613-.638-.838-.65-.213-.012-.463-.012-.713-.012s-.65.1-.987.462c-.338.363-1.287 1.263-1.287 3.075s1.325 3.563 1.5 3.813c.188.25 2.575 3.938 6.238 5.525.875.375 1.563.6 2.1.775.887.275 1.688.238 2.325.138.713-.1 2.15-.875 2.45-1.725.313-.85.313-1.575.213-1.725-.087-.15-.337-.237-.7-.425z"/></svg>
+        </a>
+        <button class="float-btn share-btn" id="shareBtn" aria-label="Partager">&#x2197;</button>
+        <button class="float-btn top-btn" id="topBtn" aria-label="Haut">&uarr;</button>
+    </div>
+
+    <!-- Share modal -->
+    <div class="share-overlay" id="shareOverlay"></div>
+    <div class="share-modal" id="shareModal">
+        <button class="share-close" id="shareClose">&times;</button>
+        <h3>Partager</h3>
+        <div class="share-options">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" class="share-opt fb">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=" target="_blank" class="share-opt tw">Twitter</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" class="share-opt li">LinkedIn</a>
+            <button class="share-opt cp" id="copyLink">Copier le lien</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        /* Smooth scroll for nav links */
+        document.querySelectorAll('.main-nav a, .footer-link[href^="#"]').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                var href = this.getAttribute('href');
+                if (!href.startsWith('#')) return;
+                e.preventDefault();
+                var target = document.querySelector(href);
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - document.getElementById('header').offsetHeight - 20,
+                        behavior: 'smooth'
+                    });
+                    document.querySelector('.main-nav').classList.remove('active');
+                }
+            });
+        });
+
+        /* Mobile menu toggle */
+        var tog = document.querySelector('.mobile-toggle');
+        var nav = document.querySelector('.main-nav');
+        tog.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            var spans = tog.querySelectorAll('span');
+            var open = nav.classList.contains('active');
+            spans[0].style.transform = open ? 'rotate(45deg) translateY(6px)' : '';
+            spans[1].style.opacity = open ? '0' : '1';
+            spans[2].style.transform = open ? 'rotate(-45deg) translateY(-6px)' : '';
+        });
+        document.addEventListener('click', function(e) {
+            if (!nav.contains(e.target) && !tog.contains(e.target) && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                tog.querySelectorAll('span').forEach(function(s) { s.style.transform = ''; s.style.opacity = '1'; });
+            }
+        });
+
+        /* Active nav highlighting on scroll */
+        var sections = document.querySelectorAll('section[id]');
+        var navLinks = document.querySelectorAll('.main-nav a');
+        window.addEventListener('scroll', function() {
+            var current = '';
+            sections.forEach(function(sec) {
+                if (pageYOffset >= sec.offsetTop - 180) current = sec.id;
+            });
+            navLinks.forEach(function(link) {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+            });
+        });
+
+        /* Scroll reveal */
+        document.querySelectorAll('.sr').forEach(function(el) {
+            new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }).observe(el);
+        });
+
+        /* Counter animation */
+        var counterObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    entry.target.classList.add('counted');
+                    var target = +entry.target.dataset.target;
+                    var increment = target / 100;
+                    var current = 0;
+                    var update = function() {
+                        current += increment;
+                        if (current < target) {
+                            entry.target.textContent = Math.floor(current);
+                            requestAnimationFrame(update);
+                        } else {
+                            entry.target.textContent = target;
+                        }
+                    };
+                    update();
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.stat-number').forEach(function(c) { counterObserver.observe(c); });
+
+        /* FAQ accordion */
+        document.querySelectorAll('.faq-question').forEach(function(q) {
+            q.addEventListener('click', function() {
+                var item = this.parentElement;
+                var wasActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(function(x) { x.classList.remove('active'); });
+                if (!wasActive) item.classList.add('active');
+            });
+        });
+
+        /* Contact form mailto */
+        var form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var data = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    type: document.getElementById('session-type').value,
+                    message: document.getElementById('message').value
+                };
+                window.location.href = 'mailto:follederire@yahoo.com?subject=' +
+                    encodeURIComponent('Demande ' + data.type + ' - ' + data.name) +
+                    '&body=' + encodeURIComponent(
+                        'Nom: ' + data.name + '\nEmail: ' + data.email +
+                        '\nTél: ' + (data.phone || 'N/A') +
+                        '\nType: ' + data.type + '\n\n' + data.message
+                    );
+            });
+        }
+
+        /* Share modal */
+        var shareBtn = document.getElementById('shareBtn');
+        var shareModal = document.getElementById('shareModal');
+        var shareOverlay = document.getElementById('shareOverlay');
+        var shareClose = document.getElementById('shareClose');
+        shareBtn.addEventListener('click', function() {
+            shareModal.classList.add('active');
+            shareOverlay.classList.add('active');
+        });
+        shareClose.addEventListener('click', function() {
+            shareModal.classList.remove('active');
+            shareOverlay.classList.remove('active');
+        });
+        shareOverlay.addEventListener('click', function() {
+            shareModal.classList.remove('active');
+            shareOverlay.classList.remove('active');
+        });
+
+        /* Copy link */
+        document.getElementById('copyLink').addEventListener('click', async function() {
+            try {
+                await navigator.clipboard.writeText(location.href);
+                document.getElementById('copyLink').textContent = 'Lien copié';
+                setTimeout(function() {
+                    document.getElementById('copyLink').textContent = 'Copier le lien';
+                }, 2000);
+            } catch (err) {
+                alert(location.href);
+            }
+        });
+
+        /* Back to top + header scroll state */
+        var topBtn = document.getElementById('topBtn');
+        var header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            topBtn.classList.toggle('visible', pageYOffset > 300);
+            header.classList.toggle('header-scrolled', pageYOffset > 50);
+        });
+        topBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+    });
+    </script>
+</body>
+</html>
